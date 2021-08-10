@@ -1,0 +1,329 @@
+/*Обнуление*/
+*{
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+html{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+*,*::before,*::after{
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: "NerisThin";
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+.wrapper{
+	max-width: 90%;
+	margin: 0 auto;
+}
+body{
+	background: url(../img/natural-paper.png) lightgray;
+}
+/*---- header start -----*/
+
+header{
+	background: url(../img/natural-paper.png) #000;
+	height: 8vh;
+	position: relative;
+	z-index: 10;
+}
+header .wrapper{
+	max-width: 30%;
+}
+.header_content nav a{
+	color: white;
+	display: inline-block;
+	margin: 15px 20px;
+}
+.header_content nav ul{
+	display: flex;
+	justify-content: space-between;
+}
+.header_content nav ul div{
+	display: flex;
+
+}
+.header_content nav ul img{
+	width: 25px;
+	height: 25px;
+
+}
+.header_content a > img{
+	height: 160px;
+}
+.header_content > a{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-48%);
+	top: 30px;
+}
+.black{
+	background-color: rgba(0,0,0,0.5);
+	position: relative;
+	height: 100%;
+}
+/*---- header end -----*/
+
+/*---- hello start -----*/
+
+.hello{
+	min-height: 92vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(../img/back.jpg) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+}
+.hello:after{
+	content: "";		
+	display: block;    
+	width: 100%;
+	height: 100%;    
+	position: absolute;
+	top: 0;      
+	left: 0;   
+	background: transparent;
+	background-color: rgba(0,0,0);
+	opacity: 0.2;
+	z-index: 1;
+}
+.hello h2{
+	font-size: 32px;
+	font-weight: bold;
+	z-index: 2;
+	position: relative;
+	right: 200px;
+}
+.hello h1{
+	font-size: 30px;
+	margin-top: 10px;
+	z-index: 2;
+	position: relative;
+	right: 200px;
+}
+.hello a{
+	display: inline-block;
+	z-index: 2;
+	position: relative;
+	right: 200px;
+	top: 30px;
+	color: #fff;
+	background-color: #000;
+	box-shadow: rgb(20,20,20) 0px 0.25em 0px 0.01em;
+	padding: 10px 35px;
+	transition: 0.5s;
+}
+.hello a:hover{
+	box-shadow: rgb(20,20,20) 0px 0px 0px 0px;
+	transform: translateY(5px);
+}
+/*---- hello end -----*/
+
+/*---- wheel start -----*/
+.wheel {
+	padding: 50px 0;
+	background: url(../img/natural-paper.png) #bbb;
+}
+
+.slick-prev{
+    position: absolute;
+    z-index: 9;
+    height: 100%;
+    width: 50px;
+
+    opacity: 0;
+}
+.slick-next{
+    position: absolute;
+    z-index: 9;
+    height: 100%;
+    width: 50px;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+}
+.slider img{
+	height: 500px;
+	margin: 0 auto;
+}
+.slick-dots{
+	display: flex;
+	justify-content: center;
+}
+.slick-dots li button{
+	background-color: #000;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	font-size: 0;
+	margin-right: 10px;
+}
+.slick-dots .slick-active button{
+	background-color: #444;
+}
+/*---- wheel end -----*/
+/*---- category start -----*/
+
+.category {
+	padding-top: 50px;
+}
+.category_content{
+}
+.category_content h2{
+	text-align: center;
+	font-size: 22px;
+}
+.category_item {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.category_item:nth-child(2n+1){
+	flex-direction: row-reverse;
+	text-align: right;
+}
+.category_item img{
+	width: 30%;
+}
+.category_item:nth-child(2n) .category_item__main{
+	margin-left: 20px;
+}
+.category_item:nth-child(2n+1) .category_item__main{
+	margin-right: 20px;
+}
+.category_item{
+	border-bottom: 2px solid gray;
+	padding-bottom: 20px;
+}
+.category_item h3{
+	font-size: 20px;
+	font-weight: bold;
+}
+.category_item p{
+	font-size: 0.9em;
+	margin-top: 20px;
+}
+
+/*---- category end -----*/
+.advantages__main {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.advantages__titel {
+	font-family: "Proxima Nova Bold";
+	font-size: 50px;
+	padding-bottom: 30px;
+}
+.advantages__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.advantages__list__item{
+	padding: 30px 20px;
+	text-align: center;
+	font-size: 20px;
+	background: #fff;
+	width: 44%;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.advantages__list__item h3{
+	text-align: left;
+	font-weight: 600;
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+.advantages__list__item p{
+	font-size: 0.7em;
+	text-align: left;
+
+}
+.advantages__list__item img{
+	height: 160px;
+}
+
+
+
+.contact {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	background: url(../img/natural-paper.png) #000;
+
+}
+.contact__main {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	color: #fff;
+}
+.contact__info {
+	grid-column: span 1;
+	text-align: center;
+	margin: 0 auto;
+
+}
+.contact__info__titel {
+	padding-top: 50px;
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+.contact__info__decr {
+	font-size: 18px;
+}
+.contact__map {
+	padding-left: 120px;
+	grid-column: span 2;
+}
+
+.map{
+	width: 100%;	
+	height: 90%;
+}
+
+.contact__icon{
+	padding-top: 50px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	padding-bottom: 35px;
+}
+
+.contact__icon a{
+	width: 50px;
+	margin: 0 auto;
+}
